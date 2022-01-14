@@ -16,7 +16,7 @@
     bottom: 6px;
     left: 90px;
     border-radius: 50%;
-    background-color: red;
+    background-color: #B5E424;
     z-index: 99;
 }
 
@@ -39,7 +39,7 @@
     bottom: 0;
     border-style: solid;
     border-width: 0 0 20px 20px;
-    border-color: transparent transparent blue transparent;
+    border-color: transparent transparent #082103 transparent;
 }
 
 .img {
@@ -51,7 +51,7 @@
 .block {
     width: 80px;
     height: 80px;
-   margin: 50px 25px 5px 10px;
+    margin: 50px 25px 5px 10px;
 }
 
 .name {
