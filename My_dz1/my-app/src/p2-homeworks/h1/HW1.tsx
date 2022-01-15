@@ -1,6 +1,7 @@
 import React from 'react'
 import Message from "./Message";
 import AlternativeMessage from "./AlternativeMessage";
+import s from './Message.module.css'
 
 let dataNow = new Date();
 let hours: number | string = dataNow.getHours();
@@ -23,8 +24,9 @@ const messageData = {
 function HW1() {
     return (
         <div>
-            <hr/>
-            homeworks 1
+            <hr />
+            <h2 className={s.hwtitle}>homeworks 1</h2>
+
 
             {/*should work (должно работать)*/}
 
@@ -35,7 +37,7 @@ function HW1() {
                 time={messageData.time}
             />
 
-            <hr/>
+            <hr />
             {/*для личного творчества, могу проверить*/}
             <AlternativeMessage
                 avatar={messageData.avatar}
@@ -43,8 +45,8 @@ function HW1() {
                 mood={messageData.mood}
                 status={messageData.status}
                 time={messageData.time}
-                />
-            <hr/>
+            />
+            <hr />
         </div>
     )
 }
