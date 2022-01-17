@@ -1,14 +1,13 @@
 .wrapper {
     width: 470px;
     margin-left: 30px;
-
     background-color: #082103;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -23,12 +22,17 @@
 }
 
 .nameStyle {
-    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 150px 0 10px;
+    width: 100px;
+    line-height: 12px;
 }
 
 .priorityStyle {
-    align-items: flex-start;
-    padding: 0 5px;
+    margin: 0 auto;
+    width: 100px;
 }
 
 .footer {
@@ -44,15 +48,34 @@
     color: #274021;
 }
 
+.active {
+    background: #335533;
+    background: #99ff99;
+}
+
 .deleteButton {
-    width: 70px;
+    display: flex;
+    justify-content: center;
+    width: 100px;
     background-color: #B5E424;
-    padding: 0 2px;
-    font-size: 18px;
+    padding: 0 10px;
+    font-size: 15px;
     color: #274021;
 }
 
 .hwtitle {
     color: teal;
     margin-left: 30px;
+}
+
+.high {
+    color: red;
+}
+
+.middle {
+    color: orange;
+}
+
+.low {
+    color: lime;
 }

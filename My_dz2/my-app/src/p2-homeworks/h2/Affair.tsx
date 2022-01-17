@@ -10,12 +10,13 @@ type AffairPropsType = {
 
 function Affair(props: AffairPropsType) {
     const deleteCallback = () => { props.deleteAffairCallback(props.affair._id) }// need to fix
-
+    const priorityClass = s.affair + ' ' + s[props.affair.priority]
     return (
         <div className={s.affair}>
             <div className={s.nameStyle}>{props.affair.name}</div>
-            <div className={s.priorityStyle}>{props.affair.priority}</div>
-            <button className={s.deleteButton} onClick={deleteCallback}>X</button>
+            <div className={priorityClass}>{props.affair.priority}</div>
+            
+            <button className={s.affair + ' ' + s.deleteButton} onClick={deleteCallback}>X</button>
         </div>
     )
 }

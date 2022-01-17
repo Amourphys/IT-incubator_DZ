@@ -7,6 +7,7 @@ type AffairsPropsType = { // need to fix any
     data: Array<AffairType>
     setFilter: (filter: FilterType) => void
     deleteAffairCallback: (_id: number) => void
+    filter: FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -22,6 +23,13 @@ function Affairs(props: AffairsPropsType) {
     const setHigh = () => { props.setFilter('high') }
     const setMiddle = () => { props.setFilter('middle') }
     const setLow = () => { props.setFilter('low') }
+    
+    const set = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {// Укороченный вариант
+        props.setFilter(e.currentTarget.value as FilterType)// принимать value как FilterType
+    }
+    const setClass = (filter: FilterType) => {
+        return s.filterButton + (props.filter === filter ? ' ' + s.active : '')
+    }
 
     return (
         <div className={s.wrapper}>
@@ -29,10 +37,15 @@ function Affairs(props: AffairsPropsType) {
                 {mappedAffairs}
             </div>
             <div className={s.footer}>
-                <button className={s.filterButton} onClick={setAll}>All</button>
+                {/* <button className={s.filterButton} onClick={setAll}>All</button>
                 <button className={s.filterButton} onClick={setHigh}>High</button>
                 <button className={s.filterButton} onClick={setMiddle}>Middle</button>
-                <button className={s.filterButton} onClick={setLow}>Low</button>
+                <button className={s.filterButton} onClick={setLow}>Low</button> */}
+                
+                <button className={setClass('all')} onClick={set} value={'all'}>All</button>
+                <button className={setClass('high')} onClick={set} value={'high'}>High</button>
+                <button className={setClass('middle')} onClick={set} value={'middle'}>Middle</button>
+                <button className={setClass('low')} onClick={set} value={'low'}>Low</button>
             </div>
         </div>
     )
