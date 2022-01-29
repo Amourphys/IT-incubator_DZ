@@ -1,0 +1,30 @@
+.blue {
+    border-bottom: 5px solid blue;
+}
+
+.column {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+    /*border: 4px solid #B5E424;*/
+    padding: 20px 0;
+}
+
+.testSpanError {
+    color: blue;
+}
+
+.title {
+    color: teal;
+    margin-left: 30px;
+    text-shadow: 4px 4px 10px red, 0 0 2em blue, 0 0 0.5em blue;
+}
+
+.checkbox {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    color: aquamarine;
+}
