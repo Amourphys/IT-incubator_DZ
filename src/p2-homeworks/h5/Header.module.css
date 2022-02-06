@@ -1,3 +1,30 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav > a {
+    width: 200px;
+    height: 25px;
+    color: indigo;
+    font-weight: bold;
+    background-color: cornflowerblue;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0.8;
+    border-radius: 4px;
+    transform: scale(1);
+    box-shadow: 0 0 5px 5px rgba(334, 360, 380, 0.2);
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.nav > a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px 7px rgba(334, 360, 380, 0.2);
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
 .active {
     background-color: red;
 }
