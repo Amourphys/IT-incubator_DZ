@@ -2,6 +2,18 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transform: translateX(-85%);
+    transition: ease 2s;
+}
+
+.nav:hover {
+    transform: translateX(0);
+    transition: ease 2s;
+}
+
+.skillButton {
+    background-color: dodgerblue;
+    color: red !important;
 }
 
 .nav > a {
@@ -25,6 +37,6 @@
     transition: box-shadow 0.5s, transform 0.5s;
 }
 
-.active {
+.nav > a.active {
     background-color: red;
 }
